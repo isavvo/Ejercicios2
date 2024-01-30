@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejercicio 2</title>
+</head>
+<body>
+  <script>
+    const inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+
+    const ordenarArreglo = (arreglo) => {
+      const arregloNumeros = [];
+
+      for (const elemento of arreglo) {
+        if (typeof elemento === "number") {
+          arregloNumeros.push(elemento);
+        }
+      }
+
+      for (let i = arregloNumeros.length - 1; i > 0; i--) {
+        for (let j = 0; j < i; j++) {
+          if (arregloNumeros[j] < arregloNumeros[j + 1]) {
+            const aux = arregloNumeros[j];
+            arregloNumeros[j] = arregloNumeros[j + 1];
+            arregloNumeros[j + 1] = aux;
+          }
+        }
+      }
+
+      return arregloNumeros;
+    };
+
+    const arregloOrdenado = ordenarArreglo(inicio);
+
+    for (const elemento of arregloOrdenado) {
+      console.log(elemento);
+    }
+  </script>
+</body>
+</html>

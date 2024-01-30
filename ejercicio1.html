@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejercicio 1</title>
+</head>
+<body>
+  <script>
+    const numeroDeElementos = 4;
+
+    function fibonacci(n) {
+      if (n === 0 || n === 1) {
+        return n;
+      } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+      }
+    }
+
+    for (let i = 0; i < numeroDeElementos; i++) {
+      console.log(fibonacci(i));
+    }
+  </script>
+</body>
+</html>
